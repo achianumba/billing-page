@@ -1,38 +1,193 @@
 .App {
-  text-align: center;
+  flex: 1 0 1319px;
+  max-width: 1319px;
+  background-color: var(--white);
+  border-radius: 1em;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sidebar {
+  border-radius: 1em;
+  background-color: var(--light);
+  padding: 1em;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-start;
+  align-content: flex-start;
+  position: relative;
+  z-index: +5;
+}
+
+.sidebar__full__height {
+  min-height: calc(100vh - 2em);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.sidebar__header {
+  flex: 1 0 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.user__info__link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.user__avatar {
+  flex: 1 0 40px;
+  max-width: 40px;
+  display: inline-block;
+  margin-right: 16px;
+  border-radius: 8px;
+}
+
+.menu__button {
+  flex: 0 0 32px;
+  max-width: 32px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.navbar {
+  flex: 0 0 100%;
+  max-width: 12ch;
+  display: none;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 48px;
+  margin-bottom: 2em;
+}
+
+nav.show__navbar {
+  display: flex;
+}
+
+.user__info {
+  flex-basis: auto;
+  display: inline-block;
+}
+
+.billing__information {
+  padding: 2em;
+}
+
+.billing__heading {
+  font-size: 2rem;
+  color: var(--dark-blue);
+}
+
+.order__history__section {
+}
+
+.order__history {
+}
+
+.order__history__description {
+}
+
+.payment__plan {
+  max-width: 258px;
+  background-color: var(--red-1);
+  margin: 32px;
+  padding: 2em;
+  border-radius: 1em;
+}
+
+.payment__plan__description,
+.payment__plan__renews__on {
+  margin-bottom: 16px;
+}
+
+p.payment__plan__name {
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+}
+
+.payment__plan__renews__on {
+}
+
+.cancel__sub {
+  display: inline-block;
+  border: 1px solid var(--white);
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 800px) {
+  .App {
+    border-radius: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
   }
-  to {
-    transform: rotate(360deg);
+
+  .sidebar {
+    max-width: 260px;
+    border-radius: 0;
+    border-top-left-radius: 2em;
+    border-bottom-left-radius: 2em;
+    background-color: var(--light);
+    padding: 2em;
+    display: block;
+    min-height: auto;
+    position: relative;
+  }
+
+  .sidebar__header {
+    display: block;
+  }
+
+  .user__info__link {
+    max-width: 100%;
+  }
+
+  .user__avatar {
+    flex: 1 0 55px;
+    max-width: 55px;
+  }
+
+  img.menu__button {
+    display: none;
+  }
+
+  .navbar {
+    display: flex;
+    margin-top: 96px;
+  }
+
+  nav.show__navbar {
+    display: flex;
+  }
+
+  .billing__information {
+  }
+
+  .billing__heading {
+    margin-bottom: 80px;
+  }
+
+  .order__history__section {
+  }
+
+  .order__history__heading {
+    margin-bottom: 8px;
+  }
+
+  .order__history__description {
+    margin-bottom: 32px;
   }
 }

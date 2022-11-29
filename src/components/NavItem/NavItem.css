@@ -1,0 +1,30 @@
+.nav__link {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav__link + .nav__link {
+  margin-top: 16px;
+}
+
+a.nav__link.logout {
+  position: absolute;
+  bottom: 1em;
+}
+
+.nav__link:not(.logout) {
+  position: relative;
+}
+
+.nav__link.active:not(.logout)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--red-1);
+  padding: 3px;
+  border-radius: 100vh;
+  height: 100%;
+}
