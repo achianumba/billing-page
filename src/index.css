@@ -45,7 +45,7 @@
 :root {
   --light-purple-1: #62618f;
   --light-purple-2: #e8e8fd;
-  --light-purle-3: #cbcbd9;
+  --light-purple-3: #cbcbd9;
   --dark-blue: #1a194d;
   --light: #f8f8ff;
   --white: #ffffff;
@@ -70,6 +70,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--light-purple-2);
   padding: 1em;
+  overflow-y: auto;
+}
+
+.disable-vertical-scroll {
+  overflow-y: hidden !important;
 }
 
 @media screen and (min-width: 800px) {

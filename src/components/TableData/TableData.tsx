@@ -1,16 +1,16 @@
-import { FunctionComponent } from 'react';
+import { FunctionComponent, ReactNode } from 'react';
 import './TableData.css';
 
 type TableDataProps = {
-  content: String;
   className?: string | null;
+  children: ReactNode;
 };
 
 const TableData: FunctionComponent<TableDataProps> = ({
-  content,
   className,
+  children,
 }) => {
-  return <td className={className ? `td ${className}` : `td`}>{content}</td>;
+  return <td className={className ? `td ${className}` : `td`}>{children}</td>;
 };
 
 export default TableData;

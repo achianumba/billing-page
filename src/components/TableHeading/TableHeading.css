@@ -2,4 +2,10 @@
   font-size: 0.875rem;
   font-weight: 400;
   color: var(--light-purple-1);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.th + .th {
+  padding-left: 1.5em;
 }

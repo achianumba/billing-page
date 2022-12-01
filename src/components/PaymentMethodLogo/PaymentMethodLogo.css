@@ -1,0 +1,6 @@
+.payment__method__logo {
+  flex: 0 0 77px;
+  max-width: 77px;
+  display: inline-block;
+  padding: 10px;
+}

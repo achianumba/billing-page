@@ -1,0 +1,14 @@
+.order__row {
+  border-radius: 0.5em;
+}
+
+.order__row:hover {
+  background-color: var(--white);
+  box-shadow: 0px 8px 19px rgba(223, 223, 253, 0.6);
+}
+
+.order__date {
+}
+
+.order__history {
+}

@@ -1,19 +1,51 @@
 .App {
-  flex: 1 0 1319px;
   max-width: 1319px;
-  background-color: var(--white);
+  min-height: calc(100vh - 4em);
+  background: linear-gradient(304.24deg, #f8f8ff 0%, #ffffff 86.71%);
   border-radius: 1em;
+  padding-bottom: 1em;
   position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
 }
 
+.text-1 {
+  font-size: 0.875rem;
+}
+
+p.text-2 {
+  font-size: 1rem;
+}
+
+.text--dark-2 {
+  color: var(--light-purple-1);
+}
+
+.text--dark-1 {
+  color: var(--dark-blue);
+}
+
+.text--white {
+  color: var(--white);
+}
+
+.text--inline {
+  display: inline-block;
+}
+
+.bold {
+  font-weight: 700;
+}
+
 .sidebar {
+  max-width: 100%;
   border-radius: 1em;
   background-color: var(--light);
-  padding: 1em;
+  padding: clamp(1em, 1vmin, 4em);
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -24,7 +56,7 @@ a {
 }
 
 .sidebar__full__height {
-  min-height: calc(100vh - 2em);
+  min-height: calc(100vh - 5em);
   position: absolute;
   top: 0;
   left: 0;
@@ -81,27 +113,64 @@ nav.show__navbar {
 }
 
 .billing__information {
-  padding: 2em;
+  padding: clamp(1em, 1vmin, 4em);
+  overflow-x: hidden;
+  margin-bottom: 40px;
 }
 
 .billing__heading {
   font-size: 2rem;
+  margin-bottom: 32px;
   color: var(--dark-blue);
 }
 
 .order__history__section {
 }
 
-.order__history {
+.order__history__heading {
 }
 
 .order__history__description {
+  margin-bottom: 32px;
+}
+
+.order__history__table {
+  table-layout: fixed;
+  max-width: 617px;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.order__history__table__header {
+  margin-bottom: 16px;
+}
+
+thead {
+  width: 100%;
+}
+
+.history__load-more {
+  border: none;
+  text-decoration: underline;
+  color: var(--red-2);
+  display: block;
+  margin-bottom: 40px;
+}
+
+.payment__method__section {
+}
+
+.payment__method__heading {
+}
+
+.payment__method__description {
+  margin-bottom: 16px;
 }
 
 .payment__plan {
   max-width: 258px;
   background-color: var(--red-1);
-  margin: 32px;
+  margin: 0 auto;
   padding: 2em;
   border-radius: 1em;
 }
@@ -127,7 +196,7 @@ p.payment__plan__name {
   white-space: nowrap;
 }
 
-@media screen and (min-width: 800px) {
+/* @media screen and (min-width: 800px) {
   .App {
     border-radius: 2em;
     display: flex;
@@ -181,6 +250,8 @@ p.payment__plan__name {
   }
 
   .order__history__section {
+    flex: 1 0 617px;
+    max-width: 617px;
   }
 
   .order__history__heading {
@@ -190,4 +261,4 @@ p.payment__plan__name {
   .order__history__description {
     margin-bottom: 32px;
   }
-}
+} */

@@ -14,20 +14,35 @@ import TableHeading from './components/TableHeading/TableHeading';
 import Icon from './components/Icon/Icon';
 import menuIcon from './images/icon-menu.svg';
 import closeIcon from './images/icon-close.svg';
-import TableData from './TableData/TableData';
+import TableRow from './components/TableRow/TableRow';
+import PaymentMethod from './components/PaymentMethod/PaymentMethod';
+import visaLogo from './images/logo-visa.svg';
+import Button from './components/Button/Button';
 
 function App() {
   const sidebarRef = useRef<HTMLDivElement>(null);
   const navbarRef = useRef<HTMLElement>(null);
+  const appRef = useRef<HTMLDivElement>(null);
 
-  const toggleNavbar = () => {
+  const toggleNavbar = (): void => {
     sidebarRef.current?.classList.toggle('sidebar__full__height');
     navbarRef.current?.classList.toggle('show__navbar');
+    appRef.current?.parentElement?.parentElement?.classList.toggle(
+      'disable-vertical-scroll'
+    );
+  };
+
+  const removePaymentMethod = (): void => {
+    // handle payment method removal
+  };
+
+  const loadMoreHistory = (): void => {
+    // load more history from database
   };
 
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="App" ref={appRef}>
         <div className="sidebar" ref={sidebarRef}>
           <div className="sidebar__header">
             <Link to="#" className="user__info__link">
@@ -114,25 +129,68 @@ function App() {
 
             <table className="order__history__table">
               <thead className="order__history__table__heading">
-                <TableHeading data="Date" />
-                <TableHeading data="Type" />
-                <TableHeading data="Receipt" />
+                <tr className="order__history__table__header">
+                  <TableHeading data="Date" />
+                  <TableHeading data="Type" />
+                  <TableHeading data="Receipt" />
+                </tr>
               </thead>
               <tbody>
-                <tr className="tr">
-                  <TableData
-                    content="Oct 21, 2021"
-                    className="text-2 text--dark-1"
-                  />
+                <TableRow
+                  orderDate="Oct 21, 2021"
+                  orderType="Pro Annual"
+                  receiptUrl="./data/order-information.pdf"
+                  receiptFilename="order-information.pdf"
+                />
 
-                  <TableData
-                    content="Pro Annual"
-                    className="text-2 text--dark-1"
-                  />
-                  {/* REFACTOR TABLEDATA COMPONENT TO ACCEPT CHILDREN INSTEAD OF A CONTENT: tHIS SHOULD BE ABLE TO ACCOMMODATE DOWNLOAD BUTTON */}
-                </tr>
+                <TableRow
+                  orderDate="Aug 21, 2021"
+                  orderType="Pro Portfolio"
+                  receiptUrl="./data/order-information.pdf"
+                  receiptFilename="order-information.pdf"
+                />
+
+                <TableRow
+                  orderDate="July 21, 2021"
+                  orderType="Sponsored Post"
+                  receiptUrl="./data/order-information.pdf"
+                  receiptFilename="order-information.pdf"
+                />
+
+                <TableRow
+                  orderDate="Jun 21, 2021"
+                  orderType="Pro Sponsored Post"
+                  receiptUrl="./data/order-information.pdf"
+                  receiptFilename="order-information.pdf"
+                />
               </tbody>
             </table>
+
+            <Button
+              onClick={loadMoreHistory}
+              className="text-2 history__load-more"
+            >
+              Load more
+            </Button>
+          </div>
+
+          <div className="payment__method__section">
+            <Text
+              content="Payment Method"
+              className="text-2 bold text--dark-1 payment__method__heading"
+            />
+
+            <Text
+              content="Manage billing information and view receipts"
+              className="text text--dark-2 payment__method__description"
+            />
+
+            <PaymentMethod
+              logoSrc={visaLogo}
+              type="Visa"
+              endingIn={2255}
+              removePaymentMethod={removePaymentMethod}
+            />
           </div>
         </div>
 

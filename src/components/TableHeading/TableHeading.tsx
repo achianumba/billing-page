@@ -10,7 +10,11 @@ const TableHeading: FunctionComponent<TableHeadingProps> = ({
   data,
   className,
 }) => {
-  return <th className={className ? `th ${className}` : 'th'}>{data}</th>;
+  return (
+    <th scope="col" className={className ? `th ${className}` : 'th'}>
+      {data}
+    </th>
+  );
 };
 
 export default TableHeading;

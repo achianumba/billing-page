@@ -1,0 +1,26 @@
+.payment__method {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.payment__method + .payment__method {
+  margin-top: 16px;
+}
+
+.payment__method__number {
+  flex: 1 0 auto;
+  padding: 0 1em;
+}
+
+.payment__method__remove {
+  flex: 0 0 auto;
+  padding: 0.5em 1em;
+}
+
+.button--bordered {
+  background-color: none;
+  border: 1px solid #cbcbd9;
+  border-radius: 8px;
+}
