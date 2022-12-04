@@ -1,6 +1,6 @@
 # Billing Page
 
-This billing page is designed by [Ildiko Gaspar](https://www.uidesigndaily.com/posts/figma-billing-page-payment-day-1585) and coded by [Arinze Chianumba](https://github.com/achianumba). A live version of this project is available [here](https://billing-page-jkg1or9wt-achianumba.vercel.app/).
+This billing page is designed by [Ildiko Gaspar](https://www.uidesigndaily.com/posts/figma-billing-page-payment-day-1585) and coded by [Arinze Chianumba](https://github.com/achianumba). A live version of this project is available [here](https://billing-page-henna.vercel.app).
 
 ## Available Scripts
 
