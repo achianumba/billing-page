@@ -27,12 +27,12 @@ const PaymentMethod: FunctionComponent<PaymentMethodProps> = ({
 
       <Text
         content={`${type} ending in ${endingIn}`}
-        className="text-2 text--dark-1 payment__method__number"
+        className="text--dark-1 payment__method__number"
       />
 
       <Button
         onClick={removePaymentMethod}
-        className="text-2 text--dark-1 button--bordered payment__method__remove"
+        className="bordered text--dark-1 button--bordered payment__method__remove"
       >
         Remove
       </Button>

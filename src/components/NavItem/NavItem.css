@@ -11,7 +11,7 @@
 
 a.nav__link.logout {
   position: absolute;
-  bottom: 1em;
+  bottom: 2em;
 }
 
 .nav__link:not(.logout) {
@@ -27,4 +27,21 @@ a.nav__link.logout {
   padding: 3px;
   border-radius: 100vh;
   height: 100%;
+}
+
+@media screen and (min-width: 1060px) {
+  .nav__link.active:not(.logout)::after {
+    display: none;
+  }
+
+  .nav__link.active:not(.logout)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -6px;
+    background-color: var(--red-1);
+    padding: 3px;
+    border-radius: 100vh;
+    height: 100%;
+  }
 }

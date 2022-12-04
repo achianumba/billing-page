@@ -18,8 +18,8 @@ const PaymentMethodLogo: FunctionComponent<PaymentMethodLogoProps> = ({
       alt={alt ? `${alt} logo` : 'logo'}
       className={
         className
-          ? `payment__method__logo button--bordered ${className}`
-          : 'payment__method__logo button--bordered'
+          ? `payment__method__logo bordered ${className}`
+          : 'payment__method__logo bordered'
       }
     />
   );

@@ -1,6 +1,6 @@
 # Billing Page
 
-Billing Page is a react-based build of the payment solution designed and published by [Ildiko Gaspar](https://www.uidesigndaily.com/posts/figma-billing-page-payment-day-1585). A live version of this project is available [here](vercel link).
+This billing page is designed by [Ildiko Gaspar](https://www.uidesigndaily.com/posts/figma-billing-page-payment-day-1585) and coded by [Arinze Chianumba](https://github.com/achianumba). A live version of this project is available [here](https://billing-page-jkg1or9wt-achianumba.vercel.app/).
 
 ## Available Scripts
 

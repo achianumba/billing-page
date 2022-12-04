@@ -68,20 +68,28 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--light-purple-2);
   padding: 1em;
-  overflow-y: auto;
+  background: linear-gradient(304.24deg, #f8f8ff 0%, #ffffff 86.71%);
 }
 
 .disable-vertical-scroll {
   overflow-y: hidden !important;
 }
 
-@media screen and (min-width: 800px) {
+.root {
+  max-width: 1319px;
+  overflow-x: hidden;
+  background: linear-gradient(304.24deg, #f8f8ff 0%, #ffffff 86.71%);
+}
+
+@media screen and (min-width: 640px) {
   body {
     padding: 2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1060px) {
+  body {
+    padding: 2em 2em 2em 0;
   }
 }

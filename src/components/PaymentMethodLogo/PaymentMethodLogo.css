@@ -1,6 +1,16 @@
 .payment__method__logo {
-  flex: 0 0 77px;
-  max-width: 77px;
+  flex: 0 0 48px;
+  max-width: 48px;
   display: inline-block;
-  padding: 10px;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 374px) {
+  .payment__method__logo {
+    flex: 0 0 77px;
+    max-width: 77px;
+    padding: 10px;
+    border-radius: 8px;
+  }
 }

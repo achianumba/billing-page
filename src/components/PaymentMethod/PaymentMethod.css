@@ -11,16 +11,23 @@
 
 .payment__method__number {
   flex: 1 0 auto;
-  padding: 0 1em;
+  padding: 0 0.5em;
 }
 
 .payment__method__remove {
   flex: 0 0 auto;
-  padding: 0.5em 1em;
+  padding: 0.5em;
+  border-radius: 4px;
 }
 
-.button--bordered {
-  background-color: none;
-  border: 1px solid #cbcbd9;
-  border-radius: 8px;
+@media screen and (min-width: 374px) {
+  .payment__method__number {
+    font-size: 1rem;
+    padding: 0 1em;
+  }
+
+  .payment__method__remove {
+    font-size: 1rem;
+    padding: 0.5em 1em;
+  }
 }
