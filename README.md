@@ -1,6 +1,8 @@
+![billing page screenshot](public/social-card.png)
+
 # Billing Page
 
-This billing page is designed by [Ildiko Gaspar](https://www.uidesigndaily.com/posts/figma-billing-page-payment-day-1585) and coded by [Arinze Chianumba](https://github.com/achianumba). A live version of this project is available [here](https://billing-page-henna.vercel.app).
+Billing page is my responsive build of [Ildiko Gaspar's](https://www.uidesigndaily.com/about) [Billing page](https://www.uidesigndaily.com/posts/figma-billing-page-payment-day-1585) UI design.
 
 ## Available Scripts
 
