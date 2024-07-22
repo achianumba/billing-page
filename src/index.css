@@ -79,6 +79,7 @@ body {
 .root {
   max-width: 1319px;
   overflow-x: hidden;
+  margin: 0 auto;
   background: linear-gradient(304.24deg, #f8f8ff 0%, #ffffff 86.71%);
 }
 
